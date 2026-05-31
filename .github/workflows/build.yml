@@ -40,6 +40,6 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: ExoticGarden-Continued v${{ steps.get_version.outputs.VERSION }}
+          name: v${{ steps.get_version.outputs.VERSION }}
           files: build/libs/ExoticGarden-Continued v*.jar
           generate_release_notes: true
