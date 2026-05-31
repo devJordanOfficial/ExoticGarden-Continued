@@ -1,8 +1,21 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+
+# Maven (legacy)
+target/
+dependency-reduced-pom.xml
+
+# Eclipse (legacy)
 /bin/
 /.settings/
 .classpath
 .project
-*.iml
-.idea
-target
-dependency-reduced-pom.xml
+
+# OS
+.DS_Store
+Thumbs.db
