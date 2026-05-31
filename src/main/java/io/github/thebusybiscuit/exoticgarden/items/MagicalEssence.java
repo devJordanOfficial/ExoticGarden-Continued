@@ -13,7 +13,8 @@ public class MagicalEssence extends SlimefunItem {
 
     @ParametersAreNonnullByDefault
     public MagicalEssence(ItemGroup itemGroup, SlimefunItemStack item) {
-        super(itemGroup, item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] { item, item, item, item, null, item, item, item, item });
+        ItemStack stack = item.item();
+        super(itemGroup, item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] { stack, stack, stack, stack, null, stack, stack, stack, stack });
     }
 
     @Override
