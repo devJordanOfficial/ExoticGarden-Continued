@@ -39,13 +39,13 @@ import io.github.thebusybiscuit.exoticgarden.PlantType;
 import io.github.thebusybiscuit.exoticgarden.Tree;
 import io.github.thebusybiscuit.exoticgarden.schematics.Schematic;
 import io.github.thebusybiscuit.exoticgarden.items.BonemealableItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
-import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.skins.PlayerHead;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.skins.PlayerSkin;
+import io.github.thebusybiscuit.slimefun5.libraries.paperlib.PaperLib;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
 public class PlantsListener implements Listener {
