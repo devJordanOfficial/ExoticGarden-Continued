@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.thebusybiscuit"
-version = "UNOFFICIAL"
+version = "1.0.0"
 description = "A Slimefun addon that adds a variety of plants, fruits, and foods to your server."
 
 github {
@@ -29,10 +29,10 @@ dependencies {
     githubCompileOnly("Slimefun5:Slimefun5:v.5.1.2")
 
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    compileOnly("io.papermc:paperlib:1.0.8")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
 
+    implementation("io.papermc:paperlib:1.0.8")
     implementation("org.bstats:bstats-bukkit:2.2.1")
 }
 
@@ -43,7 +43,7 @@ tasks {
 
     processResources {
         filesMatching("plugin.yml") {
-            expand("version" to project.version)
+            expand("version" to version)
         }
     }
 

@@ -6,8 +6,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
-import io.github.bakedlibs.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedPlayerHead;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
@@ -36,8 +36,7 @@ import io.github.thebusybiscuit.exoticgarden.schematics.Schematic;
 import io.github.thebusybiscuit.exoticgarden.items.BonemealableItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.bakedlibs.dough.config.Config;
-import io.github.bakedlibs.dough.skins.PlayerSkin;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.papermc.lib.PaperLib;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
@@ -185,7 +184,7 @@ public class PlantsListener implements Listener {
                         rotatable.setRotation(faces[ThreadLocalRandom.current().nextInt(faces.length)]);
                         blockAbove.setBlockData(rotatable);
 
-                        PlayerHead.setSkin(blockAbove, PlayerSkin.fromHashCode(berry.getTexture()), true);
+                        VersionedPlayerHead.setSkin(blockAbove, VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                         break;
                     default:
                         e.getLocation().getBlock().setType(Material.PLAYER_HEAD);
@@ -193,7 +192,7 @@ public class PlantsListener implements Listener {
                         s.setRotation(faces[ThreadLocalRandom.current().nextInt(faces.length)]);
                         e.getLocation().getBlock().setBlockData(s);
 
-                        PlayerHead.setSkin(e.getLocation().getBlock(), PlayerSkin.fromHashCode(berry.getTexture()), true);
+                        VersionedPlayerHead.setSkin(e.getLocation().getBlock(), VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                         break;
                     }
 
@@ -236,7 +235,7 @@ public class PlantsListener implements Listener {
                         Rotatable s = (Rotatable) current.getBlockData();
                         s.setRotation(faces[random.nextInt(faces.length)]);
                         current.setBlockData(s);
-                        PlayerHead.setSkin(current, PlayerSkin.fromHashCode(berry.getTexture()), true);
+                        VersionedPlayerHead.setSkin(current, VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                     }
                     else {
                         plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
@@ -244,7 +243,7 @@ public class PlantsListener implements Listener {
                             Rotatable s = (Rotatable) current.getBlockData();
                             s.setRotation(faces[random.nextInt(faces.length)]);
                             current.setBlockData(s);
-                            PlayerHead.setSkin(current, PlayerSkin.fromHashCode(berry.getTexture()), true);
+                            VersionedPlayerHead.setSkin(current, VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                         });
                     }
                     break;
@@ -255,7 +254,7 @@ public class PlantsListener implements Listener {
                         Rotatable s = (Rotatable) current.getBlockData();
                         s.setRotation(faces[random.nextInt(faces.length)]);
                         current.setBlockData(s);
-                        PlayerHead.setSkin(current, PlayerSkin.fromHashCode(berry.getTexture()), true);
+                        VersionedPlayerHead.setSkin(current, VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                     }
                     else {
                         plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, () -> {
@@ -265,7 +264,7 @@ public class PlantsListener implements Listener {
                             Rotatable ss = (Rotatable) current.getRelative(BlockFace.UP).getBlockData();
                             ss.setRotation(faces[random.nextInt(faces.length)]);
                             current.getRelative(BlockFace.UP).setBlockData(ss);
-                            PlayerHead.setSkin(current.getRelative(BlockFace.UP), PlayerSkin.fromHashCode(berry.getTexture()), true);
+                            VersionedPlayerHead.setSkin(current.getRelative(BlockFace.UP), VersionedPlayerHead.hashToBase64(berry.getTexture()), true);
                         });
                     }
                     break;
