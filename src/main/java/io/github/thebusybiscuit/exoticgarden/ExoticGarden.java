@@ -1,6 +1,5 @@
 package io.github.thebusybiscuit.exoticgarden;
 
-import io.github.thebusybiscuit.slimefun5.libraries.dough.updater.GitHubBuildsUpdater;
 import io.github.thebusybiscuit.exoticgarden.items.BonemealableItem;
 import io.github.thebusybiscuit.exoticgarden.items.Crook;
 import io.github.thebusybiscuit.exoticgarden.items.CustomFood;
@@ -92,11 +91,6 @@ public class ExoticGarden extends JavaPlugin implements SlimefunAddon {
 
         // Setting up bStats
         new Metrics(this, 4575);
-
-        // Auto Updater
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/ExoticGarden/master").start();
-        }
 
         registerItems();
 
