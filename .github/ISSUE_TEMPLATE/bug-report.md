@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a Bug or an Issue with ExoticGarden.
+about: Report a bug or issue with ExoticGarden-Continued.
 title: ''
 labels: Bug Report
 assignees: ''
@@ -8,24 +8,21 @@ assignees: ''
 ---
 
 ## Description (Required)
-<!-- A clear and detailed description of what exactly the Issue consists of. -->
+<!-- A clear and detailed description of what the issue consists of. -->
 
-## Steps to reproduce the Issue (Required)
-<!-- Youtube Videos and Screenshots are recommended! -->
+## Steps to Reproduce (Required)
+<!-- YouTube videos and screenshots are recommended! -->
 
-## Expected behavior (Required)
+## Expected Behavior (Required)
 <!-- What did you expect to happen? -->
 
 ## Server Log / Error Report
-<!-- Take a look at your Server Log and please provide any error reports you can find via https://pastebin.com/ -->
-<!-- We may discard your Issue if you just post it here, as it's unreadable for us. Please use Pastebin! -->
+<!-- Check your server log and provide any errors via https://pastebin.com/ -->
 
 ## Environment (Required)
-<!-- We may also close your Issue if you are not providing the exact version numbers. -->
-<!-- "latest" IS NOT A VERSION NUMBER. -->
-<!-- You can also just run "/sf versions" and show us a screenshot of that. -->
+<!-- Please provide exact version numbers — "latest" is not a version number. -->
+<!-- You can run "/sf versions" and share a screenshot. -->
 
- - Minecraft Version:
- - CS-CoreLib Version:
- - Slimefun Version:
- - ExoticGarden Version:
+- Minecraft Version:
+- Slimefun Version:
+- ExoticGarden-Continued Version:
