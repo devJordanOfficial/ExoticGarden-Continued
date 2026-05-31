@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.PotionEffect;
 
-import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
+import io.github.bakedlibs.dough.common.ChatColors;
 
 public final class CustomPotion extends ItemStack {
 
