@@ -6,14 +6,9 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 
-import org.bukkit.Effect;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
-import org.bukkit.Tag;
-import org.bukkit.World;
+import io.github.bakedlibs.dough.skins.PlayerHead;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.Rotatable;
@@ -41,11 +36,9 @@ import io.github.thebusybiscuit.exoticgarden.schematics.Schematic;
 import io.github.thebusybiscuit.exoticgarden.items.BonemealableItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.protection.Interaction;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.skins.PlayerHead;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.skins.PlayerSkin;
-import io.github.thebusybiscuit.slimefun5.libraries.paperlib.PaperLib;
+import io.github.bakedlibs.dough.config.Config;
+import io.github.bakedlibs.dough.skins.PlayerSkin;
+import io.papermc.lib.PaperLib;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
 public class PlantsListener implements Listener {
@@ -300,12 +293,12 @@ public class PlantsListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onHarvest(BlockBreakEvent e) {
-        if (Slimefun.getProtectionManager().hasPermission(e.getPlayer(), e.getBlock().getLocation(), Interaction.BREAK_BLOCK)) {
+        if (Slimefun.getProtectionManager().hasPermission(e.getPlayer(), e.getBlock(), Interaction.BREAK_BLOCK)) {
             if (e.getBlock().getType().equals(Material.PLAYER_HEAD) || Tag.LEAVES.isTagged(e.getBlock().getType())) {
                 dropFruitFromTree(e.getBlock());
             }
 
-            if (e.getBlock().getType() == Material.GRASS) {
+            if (e.getBlock().getType() == Material.SHORT_GRASS) {
                 if (!ExoticGarden.getGrassDrops().keySet().isEmpty() && e.getPlayer().getGameMode() != GameMode.CREATIVE) {
                     Random random = ThreadLocalRandom.current();
 
@@ -390,7 +383,7 @@ public class PlantsListener implements Listener {
 
             if (item instanceof BonemealableItem && ((BonemealableItem) item).isBonemealDisabled()) {
                 e.setCancelled(true);
-                b.getWorld().spawnParticle(Particle.VILLAGER_ANGRY, b.getLocation().clone().add(0.5, 0, 0.5), 4);
+                b.getWorld().spawnParticle(Particle.ANGRY_VILLAGER, b.getLocation().clone().add(0.5, 0, 0.5), 4);
                 b.getWorld().playSound(b.getLocation(), Sound.ENTITY_VILLAGER_NO, 1, 1);
             }
         }
