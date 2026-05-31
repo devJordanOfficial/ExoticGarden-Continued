@@ -29,6 +29,7 @@ dependencies {
     githubCompileOnly("Slimefun5:Slimefun5:v.5.1.2")
 
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    compileOnly("io.papermc:paperlib:1.0.8")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
 
