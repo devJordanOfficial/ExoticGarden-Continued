@@ -24,9 +24,9 @@ import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.multiblocks.MultiBlockMachine;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
-import io.github.thebusybiscuit.slimefun5.libraries.paperlib.PaperLib;
+import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.ItemUtils;
+import io.papermc.lib.PaperLib;
 import io.github.thebusybiscuit.slimefun5.utils.SlimefunUtils;
 
 public class Kitchen extends MultiBlockMachine {
@@ -35,7 +35,7 @@ public class Kitchen extends MultiBlockMachine {
 
     @ParametersAreNonnullByDefault
     public Kitchen(ExoticGarden plugin, ItemGroup itemGroup) {
-        super(itemGroup, new SlimefunItemStack("KITCHEN", Material.CAULDRON, "&eKitchen", "", "&a&oYou can make a bunch of different yummies here!", "&a&oThe result goes in the Furnace output slot"), new ItemStack[] { new CustomItemStack(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), new CustomItemStack(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), new ItemStack(Material.BRICKS), new ItemStack(Material.STONE_PRESSURE_PLATE), new ItemStack(Material.IRON_TRAPDOOR), new ItemStack(Material.BOOKSHELF), new ItemStack(Material.FURNACE), new ItemStack(Material.DISPENSER), new ItemStack(Material.CRAFTING_TABLE) }, new ItemStack[0], BlockFace.SELF);
+        super(itemGroup, new SlimefunItemStack("KITCHEN", Material.CAULDRON, "&eKitchen", "", "&a&oYou can make a bunch of different yummies here!", "&a&oThe result goes in the Furnace output slot"), new ItemStack[] { CustomItemStack.create(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), CustomItemStack.create(Material.BRICK_STAIRS, "&oBrick Stairs (upside down)"), new ItemStack(Material.BRICKS), new ItemStack(Material.STONE_PRESSURE_PLATE), new ItemStack(Material.IRON_TRAPDOOR), new ItemStack(Material.BOOKSHELF), new ItemStack(Material.FURNACE), new ItemStack(Material.DISPENSER), new ItemStack(Material.CRAFTING_TABLE) }, new ItemStack[0], BlockFace.SELF);
 
         this.plugin = plugin;
     }
